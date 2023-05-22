@@ -15,7 +15,7 @@ public:
 		cout << "orang di hapus\n" << endl;
 	}
 
-	int umlah(int a, int b) {
+	int jumlah(int a, int b) {
 		return a + b;
 	}
 
@@ -35,8 +35,15 @@ public:
 		cout << "pelajar dihapus\n" << endl;
 	}
 	string perkenalan() {
-		return "hallom nama saya " + nama + " dari sekolah " + sekolah;
+		return "hallom nama saya " + nama + " dari sekolah " + sekolah + "n\n";
 	}
 
 };
 
+int main() {
+	pelajar siswa1("andi laksono", "SMA 1 Bantul");
+	cout << siswa1.perkenalan();
+	cout << "Hasil = " << siswa1.jumlah(10, 90) << endl;
+
+	return 0;
+}
