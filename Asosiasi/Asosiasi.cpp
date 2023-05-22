@@ -2,20 +2,38 @@
 #include <vector>
 using namespace std;
 
-class Dokter;
+class dokter;
 class pasien
 {
 public:
 	string nama;
-	vector<Dokter*>daftar_dokter;
+	vector<dokter*>daftar_dokter;
 	pasien(string pNama) :nama(pNama) {
 		cout << "pasien\"" << nama << "\"ada\n";
 	}
 	~pasien() {
 		cout << "pasien\"" << nama << "\"tidak ada\n";
 	}
-	void tambahDokter(Dokter*);
+	void tambahDokter(dokter*);
 	void cetakDokter();
 };
 
+class dokter
+{
+public:
+	string nama;
+	vector<pasien*> daftar_pasien;
 
+	dokter(string pNama) :nama(pNama) {
+		cout << "dokter \"" << nama << "\" ada\n";
+
+	}
+
+	~dokter() {
+		cout << "dokter \"" << nama << "\" tidak ada\n";
+	}
+
+	void tambahPasien(pasien*);
+	void cetakPasien();
+
+};
