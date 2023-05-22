@@ -3,16 +3,20 @@
 using namespace std;
 
 class orang {
-  public:
-	  string nama;
+public:
+	string nama;
 
-	  orang(string pNama) :
-		  nama(pNama) {
-		  cout << "orang dibuat\n" << endl;
-	  }
-	  ~orang()
-	  {
-		  cout << "orang di hapus\n" << endl;
-	  }
-	
- }
+	orang(string pNama) :
+		nama(pNama) {
+		cout << "orang dibuat\n" << endl;
+	}
+	~orang()
+	{
+		cout << "orang di hapus\n" << endl;
+	}
+
+	int umlah(int a, int b) {
+		return a + b;
+	}
+
+};
